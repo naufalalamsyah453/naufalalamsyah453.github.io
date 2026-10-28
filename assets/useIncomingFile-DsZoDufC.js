@@ -1,0 +1,1 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{vt as t,xt as n}from"./index-CD9miez_.js";var r=e(n(),1);function i(e,n){let i=t();(0,r.useEffect)(()=>{let t=i.state?.file;if(t instanceof Blob){let r=i.state?.fileName||`file`;e(new File([t],r,{type:t.type})),n&&n(r)}i.state&&window.history.replaceState({},document.title)},[])}export{i as t};
