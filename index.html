@@ -29,8 +29,25 @@
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var system = window.matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark";
+          document.documentElement.dataset.theme = saved || system;
+        } catch (e) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="/">Naufal Alamsyah</a>
@@ -39,14 +56,27 @@
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle color theme"
+            title="Toggle color theme"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+          </button>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="container hero">
-        <p class="eyebrow">Frontend &amp; Full-Stack Developer</p>
-        <h1>Naufal Gastiadirrijal Fawwaz Alamsyah</h1>
+      <section class="container hero" data-reveal>
+        <p class="eyebrow">
+          <span
+            class="typewriter"
+            data-words="Frontend & Full-Stack Developer|React · Next.js · Laravel|Software Engineering Graduate"
+          ></span><span class="caret" aria-hidden="true"></span>
+        </p>
+        <h1 data-split>Naufal Gastiadirrijal Fawwaz Alamsyah</h1>
         <p class="lead">
           Fresh graduate in Software Engineering from Telkom University Surabaya.
           I build responsive, clean web applications using React.js, Next.js, and Laravel.
@@ -62,7 +92,7 @@
       </section>
 
       <section class="section container" id="about">
-        <h2 class="section-title">About</h2>
+        <h2 class="section-title" data-reveal>About</h2>
         <div class="prose">
           <p>
             Fresh graduate in Software Engineering from Telkom University Surabaya.
@@ -78,8 +108,8 @@
       </section>
 
       <section class="section container" id="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="grid grid-2">
+        <h2 class="section-title" data-reveal>Skills</h2>
+        <div class="grid grid-2" data-stagger>
           <div class="panel">
             <h3>Frontend</h3>
             <ul class="chips">
@@ -127,8 +157,8 @@
       </section>
 
       <section class="section container" id="experience">
-        <h2 class="section-title">Experience</h2>
-        <article class="entry">
+        <h2 class="section-title" data-reveal>Experience</h2>
+        <article class="entry" data-reveal>
           <div class="entry-head">
             <h3>Software Development Intern</h3>
             <span class="entry-period">Sep 2025 – Jan 2026</span>
@@ -146,17 +176,17 @@
               radar visualizations.
             </li>
             <li>
-              <strong>Result:</strong> Cut report generation time by 60% and reduced manual
-              data entry effort by 80% per HR cycle.
+              <strong>Result:</strong> Cut report generation time by <span class="count" data-count="60">0</span>% and reduced manual
+              data entry effort by <span class="count" data-count="80">0</span>% per HR cycle.
             </li>
           </ul>
         </article>
       </section>
 
       <section class="section container" id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="grid grid-2">
-          <article class="project">
+        <h2 class="section-title" data-reveal>Projects</h2>
+        <div class="grid grid-2" data-stagger>
+          <article class="project" data-reveal>
             <div class="project-head">
               <h3>Disbox Web</h3>
               <span class="badge">Featured</span>
@@ -175,7 +205,7 @@
                 and a real-time upload pipeline.
               </li>
               <li>
-                <strong>Result:</strong> Eliminated hosting costs entirely to $0/month and
+                <strong>Result:</strong> Eliminated hosting costs entirely to $<span class="count" data-count="0">0</span>/month and
                 delivered a production-ready app accessible on PC and mobile browsers.
               </li>
             </ul>
@@ -190,7 +220,7 @@
             </div>
           </article>
 
-          <article class="project">
+          <article class="project" data-reveal>
             <div class="project-head">
               <h3>Ruang Santri</h3>
             </div>
@@ -209,7 +239,7 @@
               </li>
               <li>
                 <strong>Result:</strong> Improved page load speed significantly and raised
-                Lighthouse performance score to 90+ after full refactor.
+                Lighthouse performance score to <span class="count" data-count="90">0</span>+ after full refactor.
               </li>
             </ul>
             <ul class="chips chips-sm">
@@ -222,7 +252,7 @@
             </div>
           </article>
 
-          <article class="project">
+          <article class="project" data-reveal>
             <div class="project-head">
               <h3>HRIS Dashboard</h3>
             </div>
@@ -241,8 +271,8 @@
               </li>
               <li>
                 <strong>Result:</strong> Delivered a fully functional performance monitoring
-                dashboard, cutting report generation time by 60% and reducing manual data
-                entry by 80% per HR cycle.
+                dashboard, cutting report generation time by <span class="count" data-count="60">0</span>% and reducing manual data
+                entry by <span class="count" data-count="80">0</span>% per HR cycle.
               </li>
             </ul>
             <ul class="chips chips-sm">
@@ -255,14 +285,14 @@
       </section>
 
       <section class="section container" id="education">
-        <h2 class="section-title">Education</h2>
-        <article class="entry">
+        <h2 class="section-title" data-reveal>Education</h2>
+        <article class="entry" data-reveal>
           <div class="entry-head">
             <h3>Bachelor of Engineering in Software Engineering</h3>
             <span class="entry-period">Sep 2022 – Jul 2026</span>
           </div>
           <p class="entry-org">Telkom University Surabaya · Surabaya, Indonesia</p>
-          <p class="entry-tech">GPA: 3.71 / 4.00 · Graduated</p>
+          <p class="entry-tech">GPA: <span class="count" data-count="3.71" data-decimals="2">0.00</span> / 4.00 · Graduated</p>
           <ul class="bullets">
             <li>
               Relevant coursework: Object-Oriented Programming, Database Management,
@@ -273,11 +303,11 @@
       </section>
 
       <section class="section container" id="contact">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title" data-reveal>Contact</h2>
         <p class="lead">
           Open to Frontend and Full-Stack Developer opportunities.
         </p>
-        <ul class="contact-list">
+        <ul class="contact-list" data-reveal>
           <li><span>Email</span><a href="mailto:naufalalamsyah453@gmail.com">naufalalamsyah453@gmail.com</a></li>
           <li><span>Phone</span><a href="tel:+628138187989">+62 813-8187-989</a></li>
           <li><span>GitHub</span><a href="https://github.com/naufalalamsyah453" target="_blank" rel="noopener">github.com/naufalalamsyah453</a></li>
@@ -293,8 +323,6 @@
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="/app.js" defer></script>
   </body>
 </html>
