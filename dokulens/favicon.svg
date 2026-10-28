@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#2563eb"/>
+  <!-- Document paper background -->
+  <path d="M144 96h144l112 112v208c0 17.673-14.327 32-32 32H144c-17.673 0-32-14.327-32-32V128c0-17.673 14.327-32 32-32z" fill="#ffffff"/>
+  <!-- Paper folded corner -->
+  <path d="M288 96v80c0 17.673 14.327 32 32 32h80L288 96z" fill="#cbd5e1"/>
+  <!-- Document Lines -->
+  <rect x="160" y="240" width="120" height="20" rx="6" fill="#94a3b8"/>
+  <rect x="160" y="280" width="180" height="20" rx="6" fill="#94a3b8"/>
+  <rect x="160" y="320" width="150" height="20" rx="6" fill="#94a3b8"/>
+  <!-- Sparkle / Privacy Shield Symbol -->
+  <circle cx="340" cy="360" r="64" fill="#16a34a"/>
+  <path d="M340 330l10 20 20 5-15 15 4 20-19-10-19 10 4-20-15-15 20-5z" fill="#ffffff"/>
+</svg>
