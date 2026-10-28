@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://naufalalamsyah453.github.io/dokulens/sitemap.xml
