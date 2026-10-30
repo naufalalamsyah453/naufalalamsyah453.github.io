@@ -52,11 +52,19 @@
       <div class="container nav">
         <a class="brand" href="/">Naufal Alamsyah</a>
         <nav class="nav-links" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#organization">Organization</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" data-id="Tentang">About</a>
+          <a href="#skills" data-id="Keahlian">Skills</a>
+          <a href="#projects" data-id="Proyek">Projects</a>
+          <a href="#organization" data-id="Organisasi">Organization</a>
+          <a href="#contact" data-id="Kontak">Contact</a>
+          <button
+            class="lang-toggle"
+            type="button"
+            aria-label="Switch language"
+            title="Switch language"
+          >
+            ID
+          </button>
           <button
             class="theme-toggle"
             type="button"
@@ -75,32 +83,43 @@
           <span
             class="typewriter"
             data-words="Frontend & Full-Stack Developer|React · Next.js · Laravel|Software Engineering Graduate"
+            data-words-id="Pengembang Frontend &amp; Full-Stack|React · Next.js · Laravel|Lulusan Teknik Informatika"
           ></span><span class="caret" aria-hidden="true"></span>
         </p>
         <h1 data-split>Naufal Gastiadirrijal Fawwaz Alamsyah</h1>
-        <p class="lead">
+        <p
+          class="lead"
+          data-id="Lulusan baru Teknik Informatika dari Telkom University Surabaya. Aku membangun aplikasi web responsif dan rapi dengan React.js, Next.js, dan Laravel."
+        >
           Fresh graduate in Software Engineering from Telkom University Surabaya.
           I build responsive, clean web applications using React.js, Next.js, and Laravel.
         </p>
-        <p class="meta">
+        <p class="meta" data-id="Surabaya, Indonesia · Terbuka untuk posisi Frontend dan Full-Stack">
           Surabaya, Indonesia · Open to Frontend and Full-Stack roles
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:naufalalamsyah453@gmail.com">Get in touch</a>
+          <a
+            class="btn btn-primary"
+            href="mailto:naufalalamsyah453@gmail.com"
+            data-id="Hubungi saya"
+            >Get in touch</a
+          >
           <a class="btn btn-ghost" href="https://github.com/naufalalamsyah453" target="_blank" rel="noopener">GitHub</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/naufal-g-f-alamsyah" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </section>
 
       <section class="section container" id="about">
-        <h2 class="section-title" data-reveal>About</h2>
+        <h2 class="section-title" data-reveal data-id="Tentang">About</h2>
         <div class="prose">
-          <p>
+          <p data-id="Lulusan baru Teknik Informatika dari Telkom University Surabaya. Aku membangun aplikasi web responsif dan rapi dengan React.js, Next.js, dan Laravel. Baru menyelesaikan studi dan terbuka untuk peluang Frontend dan Full-Stack Developer.">
             Fresh graduate in Software Engineering from Telkom University Surabaya.
             I build responsive, clean web applications using React.js, Next.js, and Laravel.
             Recently completed my degree and open to Frontend and Full-Stack Developer opportunities.
           </p>
-          <p>
+          <p
+            data-id="Terampil membangun aplikasi web responsif dan skalabel, dengan pengalaman langsung dari proyek magang dan produksi. Peduli pada clean code, UI yang presisi, dan solusi digital yang ramah pengguna."
+          >
             Proficient in building responsive, scalable web applications, with hands-on
             experience delivered through internship and production projects. Passionate
             about clean code, pixel-perfect UI, and delivering user-friendly digital solutions.
@@ -109,7 +128,7 @@
       </section>
 
       <section class="section container" id="skills">
-        <h2 class="section-title" data-reveal>Skills</h2>
+        <h2 class="section-title" data-reveal data-id="Keahlian">Skills</h2>
         <div class="grid grid-2" data-stagger>
           <div class="panel">
             <h3>Frontend</h3>
@@ -125,7 +144,7 @@
             </ul>
           </div>
           <div class="panel">
-            <h3>Backend &amp; Database</h3>
+            <h3 data-id="Backend &amp; Basis Data">Backend &amp; Database</h3>
             <ul class="chips">
               <li class="chip">Laravel</li>
               <li class="chip">PHP</li>
@@ -136,7 +155,7 @@
             </ul>
           </div>
           <div class="panel">
-            <h3>Tools</h3>
+            <h3 data-id="Alat">Tools</h3>
             <ul class="chips">
               <li class="chip">Git</li>
               <li class="chip">Figma</li>
@@ -147,7 +166,7 @@
             </ul>
           </div>
           <div class="panel">
-            <h3>Additional</h3>
+            <h3 data-id="Tambahan">Additional</h3>
             <ul class="chips">
               <li class="chip">C#</li>
               <li class="chip">Unity</li>
@@ -158,7 +177,7 @@
       </section>
 
       <section class="section container" id="experience">
-        <h2 class="section-title" data-reveal>Experience</h2>
+        <h2 class="section-title" data-reveal data-id="Pengalaman">Experience</h2>
         <article class="entry" data-reveal>
           <div class="entry-head">
             <h3>Software Development Intern</h3>
@@ -167,16 +186,22 @@
           <p class="entry-org">Telkom University Surabaya — HR Dept · Surabaya, Indonesia</p>
           <p class="entry-tech">Laravel · MySQL · Chart.js · Tailwind CSS · Bootstrap · PHPSpreadsheet</p>
           <ul class="bullets">
-            <li>
+            <li
+              data-id="<strong>Masalah:</strong> Tim HR mengelola data performa karyawan secara manual lewat spreadsheet, sering menimbulkan keterlambatan dan data yang tidak konsisten."
+            >
               <strong>Problem:</strong> HR team managed employee performance data manually
               via spreadsheets, causing frequent delays and data inconsistencies.
             </li>
-            <li>
+            <li
+              data-id="<strong>Peran &amp; aksi:</strong> Developer tunggal; membangun HRIS Dashboard end-to-end dengan pelacakan status Trained vs Untrained serta visualisasi bar dan radar Chart.js."
+            >
               <strong>Role &amp; action:</strong> Sole developer; built an end-to-end HRIS
               Dashboard with Trained vs Untrained status tracking and Chart.js bar &amp;
               radar visualizations.
             </li>
-            <li>
+            <li
+              data-id="<strong>Hasil:</strong> Memangkas waktu penyusunan laporan sekitar 60% dan mengurangi input data manual sekitar 80% per siklus HR."
+            >
               <strong>Result:</strong> Cut report generation time by <span class="count" data-count="60">0</span>% and reduced manual
               data entry effort by <span class="count" data-count="80">0</span>% per HR cycle.
             </li>
@@ -185,27 +210,27 @@
       </section>
 
       <section class="section container" id="projects">
-        <h2 class="section-title" data-reveal>Projects</h2>
+        <h2 class="section-title" data-reveal data-id="Proyek">Projects</h2>
         <div class="grid grid-2" data-stagger>
           <article class="project" data-reveal>
             <div class="project-head">
               <h3>Disbox Web</h3>
-              <span class="badge">Featured</span>
+              <span class="badge" data-id="Unggulan">Featured</span>
             </div>
-            <p class="project-blurb">
+            <p class="project-blurb" data-id="Aplikasi penyimpanan file terintegrasi Discord yang dibangun dengan React.js, Supabase, dan Tailwind CSS.">
               Discord-integrated file storage app built with React.js, Supabase, and Tailwind CSS.
             </p>
             <ul class="bullets">
-              <li>
+              <li data-id="<strong>Masalah:</strong> Butuh penyimpanan file pribadi tanpa biaya bulanan; opsi cloud berbayar tidak masuk akal untuk proyek sendiri.">
                 <strong>Problem:</strong> Needed a personal file storage solution with no
                 monthly cost; paid cloud storage options were not viable for a solo project.
               </li>
-              <li>
+              <li data-id="<strong>Peran &amp; aksi:</strong> Developer tunggal; merancang aplikasi penyimpanan file berbasis Discord Webhook dengan Supabase Auth untuk manajemen user dan pipeline upload real-time.">
                 <strong>Role &amp; action:</strong> Sole developer; architected a Discord
                 Webhook-backed file storage web app with Supabase Auth for user management
                 and a real-time upload pipeline.
               </li>
-              <li>
+              <li data-id="<strong>Hasil:</strong> Biaya hosting hilang total menjadi $0/bulan dan aplikasi siap pakai yang bisa dibuka di browser PC dan ponsel.">
                 <strong>Result:</strong> Eliminated hosting costs entirely to $<span class="count" data-count="0">0</span>/month and
                 delivered a production-ready app accessible on PC and mobile browsers.
               </li>
@@ -217,7 +242,7 @@
               <li class="chip">Discord Webhook</li>
             </ul>
             <div class="project-links">
-              <a href="https://disbox-web.pages.dev" target="_blank" rel="noopener">Live site ↗</a>
+              <a href="https://disbox-web.pages.dev" target="_blank" rel="noopener" data-id="Situs live ↗">Live site ↗</a>
             </div>
           </article>
 
@@ -225,20 +250,20 @@
             <div class="project-head">
               <h3>Ruang Santri</h3>
             </div>
-            <p class="project-blurb">
+            <p class="project-blurb" data-id="Sistem pengelolaan pesantren yang dibangun dengan Laravel, Blade, dan MySQL.">
               Islamic boarding school management system built with Laravel, Blade, and MySQL.
             </p>
             <ul class="bullets">
-              <li>
+              <li data-id="<strong>Masalah:</strong> Pesantren mengelola data siswa dan kehadiran secara manual tanpa sistem digital.">
                 <strong>Problem:</strong> Islamic boarding school managed student records
                 and attendance manually with no digital system.
               </li>
-              <li>
+              <li data-id="<strong>Peran &amp; aksi:</strong> Merombak seluruh kode frontend; menyusun ulang jadi komponen Blade modular, memisahkan panggilan API ke file layanan, dan mengoptimalkan aset gambar untuk semua breakpoint perangkat.">
                 <strong>Role &amp; action:</strong> Refactored entire frontend codebase;
                 restructured into modular Blade components, separated API calls into service
                 files, and optimized image assets for all device breakpoints.
               </li>
-              <li>
+              <li data-id="<strong>Hasil:</strong> Mempercepat muat halaman secara signifikan dan menaikkan skor performa Lighthouse ke 90+ setelah refactor penuh.">
                 <strong>Result:</strong> Improved page load speed significantly and raised
                 Lighthouse performance score to <span class="count" data-count="90">0</span>+ after full refactor.
               </li>
@@ -249,7 +274,7 @@
               <li class="chip">MySQL</li>
             </ul>
             <div class="project-links">
-              <a href="https://ruang-santri.com" target="_blank" rel="noopener">Live site ↗</a>
+              <a href="https://ruang-santri.com" target="_blank" rel="noopener" data-id="Situs live ↗">Live site ↗</a>
             </div>
           </article>
 
@@ -257,20 +282,20 @@
             <div class="project-head">
               <h3>HRIS Dashboard</h3>
             </div>
-            <p class="project-blurb">
+            <p class="project-blurb" data-id="Dashboard pemantauan performa HR yang dibangun dengan Laravel, Chart.js, dan MySQL.">
               HR performance monitoring dashboard built with Laravel, Chart.js, and MySQL.
             </p>
             <ul class="bullets">
-              <li>
+              <li data-id="<strong>Masalah:</strong> Departemen HR belum punya sistem visual untuk memantau performa karyawan dan status pelatihan, sepenuhnya bergantung pada spreadsheet manual.">
                 <strong>Problem:</strong> HR department had no visual system to monitor
                 employee performance and training status, relying entirely on manual spreadsheets.
               </li>
-              <li>
+              <li data-id="<strong>Peran &amp; aksi:</strong> Bertanggung jawab atas dashboard dan fitur performa karyawan; membangun visualisasi bar dan radar interaktif dengan Chart.js serta pelacakan status Trained vs Untrained.">
                 <strong>Role &amp; action:</strong> Responsible for dashboarding and employee
                 performance features; built interactive bar &amp; radar chart visualizations
                 using Chart.js and implemented Trained vs Untrained status tracking.
               </li>
-              <li>
+              <li data-id="<strong>Hasil:</strong> Dashboard pemantauan performa berfungsi penuh; waktu penyusunan laporan turun sekitar 60% dan input data manual turun sekitar 80% per siklus HR.">
                 <strong>Result:</strong> Delivered a fully functional performance monitoring
                 dashboard, cutting report generation time by <span class="count" data-count="60">0</span>% and reducing manual data
                 entry by <span class="count" data-count="80">0</span>% per HR cycle.
@@ -287,21 +312,21 @@
             <div class="project-head">
               <h3>DokuLens</h3>
             </div>
-            <p class="project-blurb">
+            <p class="project-blurb" data-id="Studio dokumen dan gambar client-side dengan 22 alur — pipeline PDF, Word, dan gambar yang berjalan sepenuhnya di browser, tanpa unggah, tanpa akun.">
               Client-side document & image studio with 22 tools — PDF, Word and image
               pipelines that run entirely in the browser, no uploads, no accounts.
             </p>
             <ul class="bullets">
-              <li>
+              <li data-id="<strong>Masalah:</strong> Konverter online mewajibkan unggah file pribadi ke server pihak ketiga, menambah risiko privasi dan hambatan untuk edit sederhana.">
                 <strong>Problem:</strong> Online converters require uploading private files to
                 third-party servers, adding privacy risk and friction for simple edits.
               </li>
-              <li>
+              <li data-id="<strong>Peran &amp; aksi:</strong> Membangun rangkaian alat 100% browser-first dengan pdf-lib, pdf.js, mammoth dan Tesseract.js, dikirim sebagai PWA dengan precache offline untuk mesin WASM dan route statis yang sudah di-prerender untuk SEO.">
                 <strong>Role & action:</strong> Built a 100% browser-first tool suite with
                 pdf-lib, pdf.js, mammoth and Tesseract.js, shipped as a PWA with an offline
                 precache covering the WASM engines and pre-rendered static routes for SEO.
               </li>
-              <li>
+              <li data-id="<strong>Hasil:</strong> Studio dokumen lengkap — gabung, pisah, kompres, konversi, dan OCR — semua file tetap di perangkat pengguna.">
                 <strong>Result:</strong> Full document studio — merge, split, compress, convert
                 and OCR — where every file stays on the user's machine.
               </li>
@@ -327,25 +352,25 @@
           <article class="project" data-reveal>
             <div class="project-head">
               <h3>Proton-GE MGV</h3>
-              <span class="badge">In progress</span>
+              <span class="badge" data-id="Berjalan">In progress</span>
             </div>
-            <p class="project-blurb">
+            <p class="project-blurb" data-id="Fork GE-Proton eksperimental khusus Metal Gear Solid V: The Phantom Pain — riset timing fsync/esync dan penyetelan DXVK.">
               Experimental GE-Proton fork tuned for Metal Gear Solid V: The Phantom Pain —
               fsync/esync timing research and DXVK tuning.
             </p>
             <ul class="bullets">
-              <li>
+              <li data-id="<strong>Masalah:</strong> Game stutter di Proton sementara stabil di Windows; primitive sinkronisasi Wine hanya mendekati semantik Windows dan beban CPU Denuvo menumpuk di atas biaya lapisan translasi.">
                 <strong>Problem:</strong> The game stutters under Proton while staying stable on
                 Windows; Wine's sync primitives approximate Windows semantics and Denuvo's CPU
                 load stacks on top of translation-layer cost.
               </li>
-              <li>
+              <li data-id="<strong>Peran &amp; aksi:</strong> Membaca kode Wine milik Proton (fsync.c, esync.c), menginventarisasi celah timing — hack scheduled-quantum, urutan waiter-yield, event manual-reset rawan race — lalu menyusun matriks A/B pengaturan fsync, esync, dan kompilasi pipeline DXVK terhadap profil protonfixes per game.">
                 <strong>Role & action:</strong> Read Proton's Wine source (fsync.c, esync.c),
                 catalogued the timing gaps — scheduled-quantum hack, waiter-yield ordering,
                 racy manual-reset events — and set an A/B matrix of fsync, esync and DXVK
                 pipeline-compilation settings against a per-game protonfixes profile.
               </li>
-              <li>
+              <li data-id="<strong>Hasil:</strong> Berjalan: harness benchmark dan patch sinkronisasi yang bisa diaktifkan sedang dikerjakan, ditujukan untuk perbaikan khusus game sekaligus kontribusi umum ke upstream Wine/Proton.">
                 <strong>Result:</strong> Ongoing: benchmark harness and togglable sync patches in
                 progress, aimed at both game-specific fixes and generic upstream Wine/Proton
                 contributions.
@@ -372,22 +397,22 @@
             <div class="project-head">
               <h3>opencode-telegram-bot</h3>
             </div>
-            <p class="project-blurb">
+            <p class="project-blurb" data-id="Bot Telegram yang mengendalikan sesi coding-agent CLI di host remote: jalankan perintah, streaming output tool, dan kelola sesi dari chat.">
               Telegram bot that drives a coding-agent CLI session on a remote host: run
               commands, stream tool output and manage sessions from chat.
             </p>
             <ul class="bullets">
-              <li>
+              <li data-id="<strong>Masalah:</strong> Menjalankan coding agent di server butuh terminal; mengendalikannya dari ponsel atau saat menjauh dari meja berarti bolak-balik SSH.">
                 <strong>Problem:</strong> Operating a coding agent on a server needs a terminal;
                 controlling it from a phone or away from the desk means SSH juggling.
               </li>
-              <li>
+              <li data-id="<strong>Peran &amp; aksi:</strong> Membangun bot berbasis Telegraf dengan otorisasi single-user, streaming output dengan timeout dan fallback model, plus install.sh sekali jalan yang menyiapkan Node, CLI agent, dan service systemd di Debian, Ubuntu, RHEL, Fedora, atau Alpine.">
                 <strong>Role & action:</strong> Built a Telegraf-based bot with
                 single-user authorization, streaming output with timeouts and model fallbacks,
                 plus a one-shot install.sh that provisions Node, the agent CLI and a systemd
                 service on Debian, Ubuntu, RHEL, Fedora or Alpine.
               </li>
-              <li>
+              <li data-id="<strong>Hasil:</strong> Kendali penuh atas agent — perintah, output tool, dan manajemen sesi — dari Telegram, bisa dideploy ke VPS baru dengan satu perintah.">
                 <strong>Result:</strong> Full agent control — commands, tool output and session
                 management — from Telegram, deployable to a fresh VPS in one command.
               </li>
@@ -412,24 +437,24 @@
             <div class="project-head">
               <h3>Sebar Bahagia</h3>
             </div>
-            <p class="project-blurb">
+            <p class="project-blurb" data-id="Platform undangan pernikahan digital yang berjalan sepenuhnya di Cloudflare Workers — halaman undangan publik, RSVP dan buku ucapan, plus dashboard owner dan admin.">
               Digital wedding invitation platform running fully on Cloudflare
               Workers — public invitation pages, RSVP and guestbook, plus owner and
               admin dashboards.
             </p>
             <ul class="bullets">
-              <li>
+              <li data-id="<strong>Masalah:</strong> Undangan pernikahan yang dikirim sebagai gambar WhatsApp dan link sekali pakai tidak bisa dipakai melacak RSVP atau mengelola tamu.">
                 <strong>Problem:</strong> Wedding invitations sent as WhatsApp images
                 and one-off links leave no way to track RSVPs or manage guests.
               </li>
-              <li>
+              <li data-id="<strong>Peran &amp; aksi:</strong> Membangun stack serverless di Cloudflare Workers dengan D1: URL slug ramah per pasangan, sesi HMAC untuk akun owner dan admin, endpoint RSVP dan buku ucapan dengan rate limit per-IP dan Turnstile, serta sembilan template undangan dengan musik cover dan link nama tamu.">
                 <strong>Role &amp; action:</strong> Built a serverless stack on
                 Cloudflare Workers with D1: friendly slug URLs per couple, HMAC
                 sessions for owner and admin accounts, RSVP and guestbook endpoints
                 with per-IP rate limiting and Turnstile, and nine invitation
                 templates with cover music and guest-name links.
               </li>
-              <li>
+              <li data-id="<strong>Hasil:</strong> Platform produksi live — tiap pasangan mendapat halaman undangan dengan dashboard tamu untuk melacak RSVP dan pesan.">
                 <strong>Result:</strong> Live production platform — each couple gets
                 an invitation page with a guest dashboard for RSVP tracking and
                 messages.
@@ -451,27 +476,27 @@
       </section>
 
       <section class="section container" id="organization">
-        <h2 class="section-title" data-reveal>Organization</h2>
+        <h2 class="section-title" data-reveal data-id="Organisasi">Organization</h2>
         <article class="entry" data-reveal>
           <div class="entry-head">
             <h3>Jamaahkuy</h3>
           </div>
-          <p class="entry-org">Community organization · Research &amp; Innovation Division</p>
-          <p class="entry-tech">Entrepreneurship · Creative economy · Moderate Islamic activity · Community collaboration</p>
+          <p class="entry-org" data-id="Organisasi kemasyarakatan · Divisi Riset &amp; Inovasi">Community organization · Research &amp; Innovation Division</p>
+          <p class="entry-tech" data-id="Kewirausahaan · Ekonomi kreatif · Kegiatan keislaman moderat · Kolaborasi komunitas">Entrepreneurship · Creative economy · Moderate Islamic activity · Community collaboration</p>
           <ul class="bullets">
-            <li>
+            <li data-id="<strong>Visi:</strong> Mewujudkan santripreneur muda progresif sebagai penggerak kemajuan umat dan bangsa.">
               <strong>Vision:</strong> Realizing progressive young santripreneurs as drivers of
               progress for the ummah and the nation.
             </li>
-            <li>
+            <li data-id="<strong>Misi — pengembangan kapasitas:</strong> Mengembangkan kapasitas sosial di bidang kewirausahaan dan ekonomi kreatif.">
               <strong>Mission — capacity building:</strong> Developing social capacity in
               entrepreneurship and the creative economy.
             </li>
-            <li>
+            <li data-id="<strong>Misi — keislaman moderat:</strong> Membangun pemahaman dan kegiatan keislaman yang moderat, toleran, dan aplikatif.">
               <strong>Mission — faith with moderation:</strong> Building understanding and
               Islamic activities that are moderate, tolerant, and practical.
             </li>
-            <li>
+            <li data-id="<strong>Misi — kolaborasi:</strong> Membangun kolaborasi lintas komunitas dan pemangku kepentingan.">
               <strong>Mission — collaboration:</strong> Forging cross-community partnerships
               with stakeholders.
             </li>
@@ -480,16 +505,16 @@
       </section>
 
       <section class="section container" id="education">
-        <h2 class="section-title" data-reveal>Education</h2>
+        <h2 class="section-title" data-reveal data-id="Pendidikan">Education</h2>
         <article class="entry" data-reveal>
           <div class="entry-head">
-            <h3>Bachelor of Engineering in Software Engineering</h3>
+            <h3 data-id="Sarjana Teknik Informatika">Bachelor of Engineering in Software Engineering</h3>
             <span class="entry-period">Sep 2022 – Jul 2026</span>
           </div>
           <p class="entry-org">Telkom University Surabaya · Surabaya, Indonesia</p>
-          <p class="entry-tech">GPA: <span class="count" data-count="3.71" data-decimals="2">0.00</span> / 4.00 · Graduated</p>
+          <p class="entry-tech" data-id="IPK: 3.71 / 4.00 · Lulus">GPA: <span class="count" data-count="3.71" data-decimals="2">0.00</span> / 4.00 · Graduated</p>
           <ul class="bullets">
-            <li>
+            <li data-id="Mata kuliah relevan: Pemrograman Berorientasi Objek, Manajemen Basis Data, Pengembangan Web, Pengembangan Game.">
               Relevant coursework: Object-Oriented Programming, Database Management,
               Web Development, Game Development.
             </li>
@@ -498,13 +523,13 @@
       </section>
 
       <section class="section container" id="contact">
-        <h2 class="section-title" data-reveal>Contact</h2>
-        <p class="lead">
+        <h2 class="section-title" data-reveal data-id="Kontak">Contact</h2>
+        <p class="lead" data-id="Terbuka untuk peluang posisi Frontend dan Full-Stack Developer.">
           Open to Frontend and Full-Stack Developer opportunities.
         </p>
         <ul class="contact-list" data-reveal>
           <li><span>Email</span><a href="mailto:naufalalamsyah453@gmail.com">naufalalamsyah453@gmail.com</a></li>
-          <li><span>Phone</span><a href="tel:+628138187989">+62 813-8187-989</a></li>
+          <li><span data-id="Telepon">Phone</span><a href="tel:+628138187989">+62 813-8187-989</a></li>
           <li><span>GitHub</span><a href="https://github.com/naufalalamsyah453" target="_blank" rel="noopener">github.com/naufalalamsyah453</a></li>
           <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/naufal-g-f-alamsyah" target="_blank" rel="noopener">linkedin.com/in/naufal-g-f-alamsyah</a></li>
         </ul>
@@ -514,7 +539,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© <span id="year">2026</span> Naufal Alamsyah</span>
-        <span class="muted">Built with HTML and CSS.</span>
+        <span class="muted" data-id="Dibangun dengan HTML dan CSS.">Built with HTML and CSS.</span>
       </div>
     </footer>
 

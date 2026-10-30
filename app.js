@@ -113,33 +113,93 @@
 
   /* ---------- typewriter ---------- */
   var typewriter = document.querySelector(".typewriter");
-  if (typewriter) {
-    var words = (typewriter.dataset.words || "").split("|").filter(Boolean);
-    if (reduceMotion || words.length <= 1) {
-      typewriter.textContent = words[0] || "";
-    } else {
-      var wordIndex = 0;
-      var charIndex = 0;
-      var deleting = false;
-      var tick = function () {
-        var word = words[wordIndex];
-        charIndex += deleting ? -1 : 1;
-        typewriter.textContent = word.slice(0, charIndex);
-        var delay = deleting ? 38 : 72;
-        if (!deleting && charIndex === word.length) {
-          deleting = true;
-          delay = 1700;
-        } else if (deleting && charIndex === 0) {
-          deleting = false;
-          wordIndex = (wordIndex + 1) % words.length;
-          delay = 320;
-        }
-        setTimeout(tick, delay);
-      };
-      typewriter.textContent = "";
-      setTimeout(tick, 500);
+  var twWords = [];
+  var twWordIndex = 0;
+  var twCharIndex = 0;
+  var twDeleting = false;
+  var twTimer = null;
+  function stopTypewriter() {
+    if (twTimer) {
+      clearTimeout(twTimer);
+      twTimer = null;
     }
   }
+  function startTypewriter() {
+    if (!typewriter) return;
+    stopTypewriter();
+    var attr = root.lang === "id" ? "data-words-id" : "data-words";
+    twWords = (typewriter.getAttribute(attr) || "").split("|").filter(Boolean);
+    twWordIndex = 0;
+    twCharIndex = 0;
+    twDeleting = false;
+    if (reduceMotion || twWords.length <= 1) {
+      typewriter.textContent = twWords[0] || "";
+      return;
+    }
+    var tick = function () {
+      var word = twWords[twWordIndex];
+      twCharIndex += twDeleting ? -1 : 1;
+      typewriter.textContent = word.slice(0, twCharIndex);
+      var delay = twDeleting ? 38 : 72;
+      if (!twDeleting && twCharIndex === word.length) {
+        twDeleting = true;
+        delay = 1700;
+      } else if (twDeleting && twCharIndex === 0) {
+        twDeleting = false;
+        twWordIndex = (twWordIndex + 1) % twWords.length;
+        delay = 320;
+      }
+      twTimer = setTimeout(tick, delay);
+    };
+    typewriter.textContent = "";
+    twTimer = setTimeout(tick, 500);
+  }
+
+  /* ---------- language toggle ---------- */
+  var langBtn = document.querySelector(".lang-toggle");
+  var langNodes = Array.prototype.slice.call(
+    document.querySelectorAll("[data-id]")
+  );
+  var savedLang = "en";
+  try {
+    savedLang = localStorage.getItem("lang") || "en";
+  } catch (e) {}
+
+  function finalizeCounts() {
+    document.querySelectorAll(".count").forEach(function (el) {
+      var target = parseFloat(el.dataset.count);
+      var decimals = parseInt(el.dataset.decimals || "0", 10);
+      if (!isNaN(target)) el.textContent = target.toFixed(decimals);
+    });
+  }
+
+  function applyLang(lang, initial) {
+    var restored = false;
+    root.lang = lang;
+    langNodes.forEach(function (el) {
+      if (lang === "id") {
+        if (el.dataset.en === undefined) el.dataset.en = el.innerHTML;
+        el.innerHTML = el.dataset.id;
+      } else if (el.dataset.en !== undefined) {
+        el.innerHTML = el.dataset.en;
+        restored = true;
+      }
+    });
+    if (restored) finalizeCounts();
+    if (langBtn) langBtn.textContent = lang === "id" ? "EN" : "ID";
+    try {
+      localStorage.setItem("lang", lang);
+    } catch (e) {}
+    if (!initial) startTypewriter();
+  }
+
+  if (langBtn) {
+    langBtn.addEventListener("click", function () {
+      applyLang(root.lang === "id" ? "en" : "id", false);
+    });
+  }
+  applyLang(savedLang, true);
+  startTypewriter();
 
   /* ---------- hero title letter split ---------- */
   var splitTarget = document.querySelector("[data-split]");
