@@ -55,6 +55,7 @@
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#organization">Organization</a>
           <a href="#contact">Contact</a>
           <button
             class="theme-toggle"
@@ -281,7 +282,161 @@
               <li class="chip">MySQL</li>
             </ul>
           </article>
+
+          <article class="project" data-reveal>
+            <div class="project-head">
+              <h3>DokuLens</h3>
+            </div>
+            <p class="project-blurb">
+              Client-side document & image studio with 22 tools — PDF, Word and image
+              pipelines that run entirely in the browser, no uploads, no accounts.
+            </p>
+            <ul class="bullets">
+              <li>
+                <strong>Problem:</strong> Online converters require uploading private files to
+                third-party servers, adding privacy risk and friction for simple edits.
+              </li>
+              <li>
+                <strong>Role & action:</strong> Built a 100% browser-first tool suite with
+                pdf-lib, pdf.js, mammoth and Tesseract.js, shipped as a PWA with an offline
+                precache covering the WASM engines and pre-rendered static routes for SEO.
+              </li>
+              <li>
+                <strong>Result:</strong> Full document studio — merge, split, compress, convert
+                and OCR — where every file stays on the user's machine.
+              </li>
+            </ul>
+            <ul class="chips chips-sm">
+              <li class="chip">React</li>
+              <li class="chip">Vite</li>
+              <li class="chip">pdf-lib</li>
+              <li class="chip">pdf.js</li>
+              <li class="chip">Tesseract.js</li>
+              <li class="chip">PWA</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/naufalalamsyah453/dokulens.github.io"
+                target="_blank"
+                rel="noopener"
+                >Repo ↗</a
+              >
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <div class="project-head">
+              <h3>Proton-GE MGV</h3>
+              <span class="badge">In progress</span>
+            </div>
+            <p class="project-blurb">
+              Experimental GE-Proton fork tuned for Metal Gear Solid V: The Phantom Pain —
+              fsync/esync timing research and DXVK tuning.
+            </p>
+            <ul class="bullets">
+              <li>
+                <strong>Problem:</strong> The game stutters under Proton while staying stable on
+                Windows; Wine's sync primitives approximate Windows semantics and Denuvo's CPU
+                load stacks on top of translation-layer cost.
+              </li>
+              <li>
+                <strong>Role & action:</strong> Read Proton's Wine source (fsync.c, esync.c),
+                catalogued the timing gaps — scheduled-quantum hack, waiter-yield ordering,
+                racy manual-reset events — and set an A/B matrix of fsync, esync and DXVK
+                pipeline-compilation settings against a per-game protonfixes profile.
+              </li>
+              <li>
+                <strong>Result:</strong> Ongoing: benchmark harness and togglable sync patches in
+                progress, aimed at both game-specific fixes and generic upstream Wine/Proton
+                contributions.
+              </li>
+            </ul>
+            <ul class="chips chips-sm">
+              <li class="chip">C</li>
+              <li class="chip">Proton</li>
+              <li class="chip">Wine</li>
+              <li class="chip">DXVK</li>
+              <li class="chip">Linux</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/naufalalamsyah453/proton-ge-mgv"
+                target="_blank"
+                rel="noopener"
+                >Repo ↗</a
+              >
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <div class="project-head">
+              <h3>opencode-telegram-bot</h3>
+            </div>
+            <p class="project-blurb">
+              Telegram bot that drives a coding-agent CLI session on a remote host: run
+              commands, stream tool output and manage sessions from chat.
+            </p>
+            <ul class="bullets">
+              <li>
+                <strong>Problem:</strong> Operating a coding agent on a server needs a terminal;
+                controlling it from a phone or away from the desk means SSH juggling.
+              </li>
+              <li>
+                <strong>Role & action:</strong> Built a Telegraf-based bot with
+                single-user authorization, streaming output with timeouts and model fallbacks,
+                plus a one-shot install.sh that provisions Node, the agent CLI and a systemd
+                service on Debian, Ubuntu, RHEL, Fedora or Alpine.
+              </li>
+              <li>
+                <strong>Result:</strong> Full agent control — commands, tool output and session
+                management — from Telegram, deployable to a fresh VPS in one command.
+              </li>
+            </ul>
+            <ul class="chips chips-sm">
+              <li class="chip">Node.js</li>
+              <li class="chip">Telegraf</li>
+              <li class="chip">systemd</li>
+              <li class="chip">Bash</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/naufalalamsyah453/opencode-telegram-bot"
+                target="_blank"
+                rel="noopener"
+                >Repo ↗</a
+              >
+            </div>
+          </article>
         </div>
+      </section>
+
+      <section class="section container" id="organization">
+        <h2 class="section-title" data-reveal>Organization</h2>
+        <article class="entry" data-reveal>
+          <div class="entry-head">
+            <h3>Jamaahkuy</h3>
+          </div>
+          <p class="entry-org">Community organization · Progressive young santripreneurs</p>
+          <p class="entry-tech">Entrepreneurship · Creative economy · Moderate Islamic activity · Community collaboration</p>
+          <ul class="bullets">
+            <li>
+              <strong>Vision:</strong> Realizing progressive young santripreneurs as drivers of
+              progress for the ummah and the nation.
+            </li>
+            <li>
+              <strong>Mission — capacity building:</strong> Developing social capacity in
+              entrepreneurship and the creative economy.
+            </li>
+            <li>
+              <strong>Mission — faith with moderation:</strong> Building understanding and
+              Islamic activities that are moderate, tolerant, and practical.
+            </li>
+            <li>
+              <strong>Mission — collaboration:</strong> Forging cross-community partnerships
+              with stakeholders.
+            </li>
+          </ul>
+        </article>
       </section>
 
       <section class="section container" id="education">
